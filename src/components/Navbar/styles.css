@@ -1,0 +1,131 @@
+nav {
+  background-color: #fff;
+  box-shadow: 0 2px 4px #949390;
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+}
+
+nav .logo-container {
+  display: flex;
+  align-items: center;
+  height: 2rem;
+  overflow: hidden;
+  width: 7.5rem;
+}
+
+nav img {
+  height: 150px;
+}
+
+.titleName {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  margin-left: auto;
+  margin-right: 2rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.02em;
+}
+
+.orcamentoBttn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 1rem;
+  height: 40px;
+  padding: 0 24px;
+  background-color: #251c14;
+  color: #eaeae5;
+  line-height: normal;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s ease;
+}
+
+.orcamentoBttn:hover {
+  background-color: #52473d;
+}
+
+/* Mobile Styles */
+
+.mobileNav {
+  display: none;
+}
+
+.nav-links-mobile {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  border-top: 1px solid #ccc;
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+}
+
+.nav-links-mobile a {
+  display: block;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #251c14;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+#nav-links-mobile {
+  margin-right: 0;
+}
+
+.nav-links-mobile .orcamentoBttn {
+  background-color: #251c14;
+  color: #eaeae5;
+  text-align: center;
+}
+
+.nav-links-mobile .orcamentoBttn:hover {
+  background-color: #52473d;
+}
+
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+  }
+
+  .nav-links-desktop {
+    display: none;
+  }
+
+  .mobileNav {
+    display: block;
+    margin-left: auto;
+    margin-right: 2rem;
+  }
+
+  .mobileNav button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menuIcon {
+    width: 24px;
+    height: 24px;
+    color: #251c14;
+  }
+}

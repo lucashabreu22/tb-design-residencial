@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "Le Quarte";
+  src: url("./assets/fonts/Le Quarte.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Gantic Regular";
+  src: url("./assets/fonts/GANTIC_Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gantic Regular", sans-serif;
+  color: #251c14;
+  background-color: #eaeae5;
+}
+
+.font-gantic {
+  font-family: "Gantic Regular", sans-serif;
+}
+
+.font-le-quarte {
+  font-family: "Le Quarte", serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding-left: 0;
+}
