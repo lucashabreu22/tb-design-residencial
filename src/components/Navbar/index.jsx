@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import logoImg from "/src/assets/img/PNG (MARCA DÁGUA)-19.png";
 
 import "./styles.css";
 
@@ -16,11 +17,7 @@ const Navbar = () => {
   return (
     <nav>
       <div className="logo-container">
-        <img
-          className="logo"
-          src="/src/assets/img/PNG (MARCA DÁGUA)-19.png"
-          alt="tbLogo"
-        />
+        <img className="logo" src={logoImg} alt="tbLogo" />
       </div>
       <h1 className="font-gantic titleName">Design Residencial</h1>
 

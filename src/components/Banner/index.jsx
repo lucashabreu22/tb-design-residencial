@@ -1,4 +1,5 @@
 import "./style.css";
+import bannerImage from "/src/assets/img/hero-project.jpg";
 
 import { ArrowRight } from "lucide-react";
 
@@ -6,7 +7,7 @@ const Banner = () => {
   return (
     <section>
       <div className="img-container">
-        <img src="/src/assets/img/hero-project.jpg" alt="mainBannerImg" />
+        <img src={bannerImage} alt="mainBannerImg" />
         <div className="imgBg"></div>
       </div>
 
