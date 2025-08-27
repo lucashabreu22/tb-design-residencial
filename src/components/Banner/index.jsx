@@ -12,7 +12,8 @@ const Banner = () => {
       </div>
 
       <div className="banner-text">
-        <h1>Transformando Espaços, Criando Lares</h1>
+        <h1>Transformando Espaços,</h1>
+        <h1>Criando Lares</h1>
         <p>
           Desenvolvemos projetos onde cada detalhe é pensado para unir estética,
           funcionalidade e conforto, criando ambientes que refletem sua

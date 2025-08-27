@@ -1,8 +1,9 @@
 section {
   position: relative;
-  min-height: 90vh;
+  min-height: 100vh;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .img-container {
@@ -38,32 +39,38 @@ img {
 .banner-text {
   position: relative;
   z-index: 10;
-  max-width: 1200px;
+  max-width: 900px; /* Reduzido para evitar vazamento */
   margin: 0 auto;
   text-align: center;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .banner-text h1 {
   font-family: "Le Quarte";
-  font-size: 3.5rem !important; /* força a aplicação */
+  font-size: 3.8rem; /* Reduzido */
   font-weight: bold;
   color: white;
   line-height: 1.1;
   letter-spacing: 0.05em;
   margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
 .banner-text p {
-  font-size: 2.75rem !important;
+  font-size: 2.5rem; /* Muito reduzido */
   color: rgba(234, 234, 229, 0.9);
   margin-bottom: 2rem;
-  text-shadow: 1px 1px 3px #251c14;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  line-height: 1.6;
+  max-width: 100%; /* Garante que não vaze */
+  word-wrap: break-word; /* Quebra palavras longas */
 }
 
 .bannerBttns {
   display: flex;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: row; /* Desktop */
   gap: 1rem;
   z-index: 10;
 }
@@ -78,6 +85,7 @@ img {
   border-radius: 1rem;
   display: flex;
   align-items: center;
+  border: none;
   gap: 0.5rem;
 }
 
@@ -85,22 +93,50 @@ img {
   background-color: #eaeae5;
 }
 
-@media (max-width: 768px) {
+/* Tablet e Mobile */
+@media (max-width: 1023px) {
+  .banner-text {
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .banner-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
   .banner-text {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
   .banner-text h1 {
-    font-size: 2rem !important;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    line-height: 1.2;
   }
 
   .banner-text p {
-    font-size: 1.5rem !important;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+  }
+
+  .bannerBttns {
+    flex-direction: column;
   }
 
   .bannerBttns button {
-    font-size: 0.75rem !important;
-    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    justify-content: center;
   }
 }
