@@ -18,7 +18,7 @@ const Contato = () => {
             <p>Entre em contato e solicite um orçamento.</p>
           </div>
           <button className="contato-button">
-            Iniciar Meu Projeto <ArrowRight size={20} />
+            Solicitar Orçamento Gratuito <ArrowRight size={20} />
           </button>
         </div>
       </div>
