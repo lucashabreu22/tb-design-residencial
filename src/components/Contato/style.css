@@ -1,0 +1,143 @@
+.contato-section {
+  background-color: #eaeae5;
+  padding: 6rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.contato-container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 0 2rem;
+  margin: 0 auto;
+}
+
+.contato-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.contato-titulo {
+  font-size: 2.2rem;
+  color: #251c14;
+  line-height: 1.2;
+  margin: 0;
+  max-width: 800px;
+}
+
+.contato-texto {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 600px;
+}
+
+.contato-texto p {
+  font-size: 1.7rem;
+  color: #52473d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.contato-button {
+  background-color: #251c14;
+  color: #eaeae5;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: all 0.3s ease;
+  margin-top: 1rem;
+}
+
+.contato-button:hover {
+  background-color: #52473d;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(37, 28, 20, 0.2);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .contato-section {
+    padding: 5rem 0;
+  }
+
+  .contato-titulo {
+    font-size: 2.5rem;
+  }
+
+  .contato-texto p {
+    font-size: 1.125rem;
+  }
+
+  .contato-button {
+    font-size: 1rem;
+    padding: 0.875rem 1.75rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contato-section {
+    padding: 4rem 0;
+  }
+
+  .contato-container {
+    padding: 0 1.5rem;
+  }
+
+  .contato-content {
+    gap: 1.5rem;
+  }
+
+  .contato-titulo {
+    font-size: 2rem;
+  }
+
+  .contato-texto p {
+    font-size: 1rem;
+  }
+
+  .contato-button {
+    font-size: 0.95rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contato-section {
+    padding: 3rem 0;
+  }
+
+  .contato-container {
+    padding: 0 1rem;
+  }
+
+  .contato-content {
+    gap: 1.25rem;
+  }
+
+  .contato-titulo {
+    font-size: 1.75rem;
+    line-height: 1.3;
+  }
+
+  .contato-texto p {
+    font-size: 1.5rem;
+  }
+
+  .contato-button {
+    font-size: 0.9rem;
+    padding: 0.75rem 1.25rem;
+    gap: 0.5rem;
+  }
+}

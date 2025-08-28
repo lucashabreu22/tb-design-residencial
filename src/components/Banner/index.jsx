@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 const Banner = () => {
   return (
-    <section>
+    <section className="banner-section">
       <div className="img-container">
         <img src={bannerImage} alt="mainBannerImg" />
         <div className="imgBg"></div>
@@ -22,10 +22,10 @@ const Banner = () => {
 
         <div className="bannerBttns">
           <button className="primaryBttn">
-            Nossos Serviços <ArrowRight size={20} />
+            Serviços <ArrowRight size={20} />
           </button>
           <button className="secondaryBttn">
-            Nossos Projetos <ArrowRight size={20} />
+            Projetos <ArrowRight size={20} />
           </button>
         </div>
       </div>
