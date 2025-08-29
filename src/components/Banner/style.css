@@ -63,20 +63,20 @@ img {
   opacity: 0.9;
   filter: brightness(1.2) contrast(1.1);
   object-fit: contain;
-  transform: scale(8); /* Aumenta a imagem sem aumentar o container */
+  transform: scale(1.7); /* Aumenta a imagem sem aumentar o container */
 }
 
 .banner-text h1 {
-  font-size: 2.5rem; /* Reduzido */
+  font-size: 2.5rem;
   font-weight: bold;
   color: white;
   margin-bottom: 1.5rem;
   line-height: 1.1;
-  letter-spacing: 2px; /* Adicione esta linha */
+  letter-spacing: 0.3rem;
 }
 
 .banner-text p {
-  font-size: 2.5rem; /* Muito reduzido */
+  font-size: 2.5rem;
   color: rgba(234, 234, 229, 0.9);
   margin-bottom: 2rem;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
@@ -128,7 +128,7 @@ img {
 
   .watermark-image {
     height: 115px; /* Proporção mantida: 75% do desktop */
-    transform: scale(6); /* Proporção mantida: 75% do desktop */
+    transform: scale(1.6); /* Proporção mantida: 75% de 1.7 */
   }
 
   .banner-text h1 {
@@ -156,7 +156,7 @@ img {
 
   .watermark-image {
     height: 75px; /* Proporção mantida: 50% do desktop */
-    transform: scale(7); /* Proporção mantida: 50% do desktop */
+    transform: scale(1.6); /* Proporção mantida: 50% de 1.7 */
   }
 
   .banner-text h1 {
