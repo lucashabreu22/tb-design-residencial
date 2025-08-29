@@ -1,5 +1,6 @@
 import "./style.css";
 import bannerImage from "/src/assets/img/hero-project.jpg";
+import watermarkImage from "/src/assets/img/PNG (MARCA DÁGUA)-01.png";
 
 import { Link } from "react-router-dom";
 
@@ -14,14 +15,15 @@ const Banner = () => {
       </div>
 
       <div className="banner-text">
-        <h1>Transformando Espaços,</h1>
-        <h1>Criando Lares</h1>
-        <p>
-          Desenvolvemos projetos onde cada detalhe é pensado para unir estética,
-          funcionalidade e conforto, criando ambientes que refletem sua
-          personalidade e estilo de vida.
-        </p>
-
+        {/* Marca d'água centralizada */}
+        <div className="watermark-container">
+          <img
+            src={watermarkImage}
+            alt="TB Design Logo"
+            className="watermark-image"
+          />
+        </div>
+        <h1 className="font-gantic">Transformando Espaços, Criando Lares</h1>{" "}
         <div className="bannerBttns">
           <Link to={"/servicos"}>
             <button className="primaryBttn">

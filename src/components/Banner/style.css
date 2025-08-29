@@ -46,14 +46,33 @@ img {
   padding-right: 1.5rem;
 }
 
+/* Marca d'água */
+.watermark-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  height: 240px; /* Altura fixa para controlar o espaço */
+  overflow: hidden; /* Corta o excesso */
+  width: 710px;
+}
+
+.watermark-image {
+  width: auto;
+  height: 150px; /* Maior que o container para "cortar" espaços */
+  opacity: 0.9;
+  filter: brightness(1.2) contrast(1.1);
+  object-fit: contain;
+  transform: scale(8); /* Aumenta a imagem sem aumentar o container */
+}
+
 .banner-text h1 {
-  font-family: "Le Quarte";
-  font-size: 3.8rem; /* Reduzido */
+  font-size: 2.5rem; /* Reduzido */
   font-weight: bold;
   color: white;
-  line-height: 1.1;
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1.1;
+  letter-spacing: 2px; /* Adicione esta linha */
 }
 
 .banner-text p {
@@ -100,6 +119,18 @@ img {
     padding-right: 2rem;
   }
 
+  .watermark-container {
+    height: 180px; /* Proporção mantida: 75% do desktop */
+    margin-bottom: 1.25rem;
+    width: 530px; /* Proporção mantida: 75% do desktop */
+    max-width: 90vw; /* Não vaza da tela */
+  }
+
+  .watermark-image {
+    height: 115px; /* Proporção mantida: 75% do desktop */
+    transform: scale(6); /* Proporção mantida: 75% do desktop */
+  }
+
   .banner-text h1 {
     font-size: 2.2rem;
   }
@@ -116,8 +147,20 @@ img {
     padding-right: 1.5rem;
   }
 
+  .watermark-container {
+    height: 120px; /* Proporção mantida: 50% do desktop */
+    margin-bottom: 1rem;
+    width: 355px; /* Proporção mantida: 50% do desktop */
+    max-width: 85vw; /* Não vaza da tela */
+  }
+
+  .watermark-image {
+    height: 75px; /* Proporção mantida: 50% do desktop */
+    transform: scale(7); /* Proporção mantida: 50% do desktop */
+  }
+
   .banner-text h1 {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     margin-bottom: 1rem;
     line-height: 1.2;
   }
