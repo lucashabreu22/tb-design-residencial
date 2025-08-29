@@ -2,9 +2,9 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import "./style.css";
 
-const Contato = () => {
+const Contato = ({ backgroundColor = "#EAEAE5" }) => {
   return (
-    <section className="contato-section">
+    <section className="contato-section" style={{ backgroundColor }}>
       <div className="contato-container">
         <div className="contato-content">
           <h2 className="contato-titulo font-le-quarte">

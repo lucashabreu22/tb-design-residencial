@@ -1,0 +1,24 @@
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  max-width: 1000px;
+  width: 100%;
+  margin: 3rem auto;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .reasons-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+    margin: 2rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .reasons-grid {
+    gap: 1rem;
+  }
+}

@@ -7,11 +7,15 @@ import App from "./App.jsx";
 
 //Pages Import
 import Home from "./pages/Home/index.jsx";
+import ServicoPage from "./pages/Servicos/index.jsx";
 
 const router = createBrowserRouter([
   {
     element: <App />,
-    children: [{ path: "/", element: <Home /> }],
+    children: [
+      { path: "/", element: <Home /> },
+      { path: "/servicos", element: <ServicoPage /> },
+    ],
   },
 ]);
 

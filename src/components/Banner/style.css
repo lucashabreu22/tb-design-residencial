@@ -128,10 +128,6 @@ img {
     line-height: 1.5;
   }
 
-  .bannerBttns {
-    flex-direction: column;
-  }
-
   .bannerBttns button {
     font-size: 0.875rem;
     padding: 0.875rem 1.25rem;

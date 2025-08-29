@@ -1,6 +1,8 @@
 import "./style.css";
 import bannerImage from "/src/assets/img/hero-project.jpg";
 
+import { Link } from "react-router-dom";
+
 import { ArrowRight } from "lucide-react";
 
 const Banner = () => {
@@ -21,12 +23,17 @@ const Banner = () => {
         </p>
 
         <div className="bannerBttns">
-          <button className="primaryBttn">
-            Serviços <ArrowRight size={20} />
-          </button>
-          <button className="secondaryBttn">
-            Projetos <ArrowRight size={20} />
-          </button>
+          <Link to={"/servicos"}>
+            <button className="primaryBttn">
+              Serviços <ArrowRight size={20} />
+            </button>
+          </Link>
+
+          <Link to={"/"}>
+            <button className="secondaryBttn">
+              Projetos <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>

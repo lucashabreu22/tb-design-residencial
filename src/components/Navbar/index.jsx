@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import logoImg from "/src/assets/img/PNG (MARCA DÁGUA)-19.png";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -9,10 +10,15 @@ const Navbar = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "/", label: "Serviços" },
+    { href: "/servicos", label: "Serviços" },
     { href: "/", label: "Projetos" },
     { href: "/", label: "Sobre" },
   ];
+
+  // Função para fechar o menu
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
 
   return (
     <nav>
@@ -26,13 +32,15 @@ const Navbar = () => {
       <ul className="nav-links-desktop">
         {navItems.map((navItem, index) => (
           <li key={index}>
-            <a href={navItem.href}>{navItem.label}</a>
+            <Link to={navItem.href}>
+              <a>{navItem.label}</a>
+            </Link>
           </li>
         ))}
         <li>
-          <a className="orcamentoBttn" href="#contact">
-            Orçamento
-          </a>
+          <Link to="/">
+            <a className="orcamentoBttn">Orçamento</a>
+          </Link>
         </li>
       </ul>
 
@@ -47,13 +55,15 @@ const Navbar = () => {
             <ul className="nav-links-mobile" id="nav-links-mobile">
               {navItems.map((navItem, index) => (
                 <li key={index}>
-                  <a href={navItem.href}>{navItem.label}</a>
+                  <Link to={navItem.href} onClick={closeMenu}>
+                    <a>{navItem.label}</a>
+                  </Link>
                 </li>
               ))}
               <li>
-                <a className="orcamentoBttn" href="#contact">
-                  Orçamento
-                </a>
+                <Link to="/" onClick={closeMenu}>
+                  <a className="orcamentoBttn">Orçamento</a>
+                </Link>
               </li>
             </ul>
           )}
