@@ -3,6 +3,7 @@ import ServicesGrid from "../../components/ServicesGrid";
 import ProcessStepsGrid from "../../components/ProcessStepsGrid";
 import ReasonsGrid from "../../components/ReasonsGrid";
 import Contato from "../../components/Contato";
+import BackToTop from "../../components/common/BackToTop";
 
 import { useServices } from "../../hooks/useServices";
 import { useProcessSteps } from "../../hooks/useProcessSteps";
@@ -20,7 +21,7 @@ const ServicoPage = () => {
   return (
     <>
       <SubPageHeader
-        title={"Nosso Serviços"}
+        title={"Serviços"}
         subTitle={
           "Oferecemos soluções completas em design, do conceito inicial à entrega do projeto final do seus sonhos."
         }
@@ -28,7 +29,7 @@ const ServicoPage = () => {
       />
 
       <section className="servicos-page-content">
-        <ServicesGrid servicos={servicos} />
+        <ServicesGrid servicos={servicos} variant="page" />
       </section>
 
       <section className="information-text-section">
@@ -52,6 +53,7 @@ const ServicoPage = () => {
       </section>
 
       <Contato backgroundColor="white" />
+      <BackToTop />
     </>
   );
 };

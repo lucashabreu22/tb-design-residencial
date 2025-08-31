@@ -1,5 +1,6 @@
 import "./style.css";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 import ProjectGrid from "../ProjectGrid";
 import { useProjects } from "../../hooks/useProjects";
 
@@ -16,9 +17,11 @@ const Projetos = () => {
             funcionalidade inteligente.
           </p>
         </div>
-        <button className="todos-projetos-button">
-          Todos os Projetos <ArrowRight size={20} />
-        </button>
+        <Link to="/portfolio" className="todos-projetos-link">
+          <button className="todos-projetos-button">
+            Todos os Projetos <ArrowRight size={20} />
+          </button>
+        </Link>
       </div>
 
       <ProjectGrid projetos={projetos} />

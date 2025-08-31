@@ -31,9 +31,9 @@ const Banner = () => {
             </button>
           </Link>
 
-          <Link to={"/"}>
+          <Link to={"/portfolio"}>
             <button className="secondaryBttn">
-              Projetos <ArrowRight size={20} />
+              Portfólio <ArrowRight size={20} />
             </button>
           </Link>
         </div>

@@ -11,7 +11,7 @@ const Navbar = () => {
   const navItems = [
     { href: "/", label: "Home" },
     { href: "/servicos", label: "Serviços" },
-    { href: "/", label: "Projetos" },
+    { href: "/portfolio", label: "Portfólio" },
     { href: "/", label: "Sobre" },
   ];
 
@@ -22,10 +22,12 @@ const Navbar = () => {
 
   return (
     <nav>
-      <div className="logo-container">
-        <img className="logo" src={logoImg} alt="tbLogo" />
-      </div>
-      <h1 className="font-gantic titleName">Design Residencial</h1>
+      <Link to="/" className="logo-link">
+        <div className="logo-container">
+          <img className="logo" src={logoImg} alt="tbLogo" />
+        </div>
+        <h1 className="font-gantic titleName">Design Residencial</h1>
+      </Link>
 
       {/* Desktop Navigation*/}
       <div className="desktopNav"></div>
@@ -43,7 +45,6 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-
       {/* Mobile Navigation*/}
       <div className="mobileNav">
         <button onClick={() => setIsOpen((prev) => !prev)}>

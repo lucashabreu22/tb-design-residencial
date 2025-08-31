@@ -38,8 +38,8 @@
 @media (max-width: 768px) {
   .process-step-card {
     max-width: 100%;
-    padding: 1.5rem 1rem;
-    margin-bottom: 0;
+    padding: 0rem 1rem;
+    margin-bottom: 1rem;
   }
 
   .process-step-number {

@@ -8,6 +8,27 @@ nav {
   padding-right: 1rem;
 }
 
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.logo-link:hover {
+  text-decoration: none;
+}
+
+.logo-link .titleName {
+  color: #251c14;
+  transition: color 0.2s ease;
+}
+
+.logo-link:hover .titleName {
+  color: #52473d;
+}
+
 nav .logo-container {
   display: flex;
   align-items: center;
@@ -24,7 +45,7 @@ nav img {
   font-size: 1.5rem; /* Reduzido para mobile first */
   font-weight: 700;
   letter-spacing: 0.02em;
-  transform: translate(-12%, 0%);
+  transform: translate(-15%, 0%);
 }
 
 nav ul {
@@ -124,7 +145,7 @@ nav ul {
 @media (min-width: 769px) {
   .titleName {
     font-size: 1.8rem; /* Maior no desktop */
-    transform: translate(-12%, 0%);
+    transform: translate(-15%, 0%);
   }
 
   nav ul {

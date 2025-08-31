@@ -1,4 +1,4 @@
-/* Grid de Projetos */
+/* Grid de Projetos - Padrão (Home) */
 .projetos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,19 +9,41 @@
   margin-bottom: 4rem;
 }
 
+/* Grid de Projetos - Portfolio (Centralizado) */
+.projetos-grid--portfolio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 4rem;
+  justify-content: center;
+}
+
+/* Quando há 1 ou 2 cards, aumentar para 500px */
+.projetos-grid--portfolio:has(.projeto-card:nth-child(1):nth-last-child(1)),
+.projetos-grid--portfolio:has(.projeto-card:nth-child(2):nth-last-child(1)) {
+  grid-template-columns: repeat(auto-fit, minmax(500px, 500px));
+}
+
 /* Card do Projeto */
 .projeto-card {
   background-color: #fff;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
+  position: relative;
 }
 
 .projeto-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.projeto-card:active {
+  transform: translateY(-4px);
 }
 
 /* Container da Imagem */
@@ -51,12 +73,13 @@
 .projeto-categoria {
   background-color: rgba(37, 28, 20, 0.1);
   color: #251c14;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 0.8rem;
   border-radius: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
   display: inline-block;
   margin-bottom: 0.75rem;
+  transition: all 0.2s ease;
 }
 
 .projeto-titulo {
@@ -81,6 +104,18 @@
   .projetos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
+
+  .projetos-grid--portfolio {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 280px));
+    gap: 1.5rem;
+  }
+
+  /* Quando há 1 ou 2 cards no tablet, aumentar para 400px */
+  .projetos-grid--portfolio:has(.projeto-card:nth-child(1):nth-last-child(1)),
+  .projetos-grid--portfolio:has(.projeto-card:nth-child(2):nth-last-child(1)) {
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
   }
 
   .projeto-image-container {
@@ -89,16 +124,33 @@
 
   .projeto-titulo {
     font-size: 1.3rem;
+    line-height: 1.2;
   }
 
   .projeto-descricao {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .projeto-categoria {
+    font-size: 0.9rem;
+    padding: 0.35rem 0.7rem;
   }
 }
 
 @media (max-width: 600px) {
-  .projetos-grid {
+  .projetos-grid,
+  .projetos-grid--portfolio {
     grid-template-columns: 1fr;
+  }
+
+  /* No mobile, todos os cards ocupam 100% da largura */
+  .projetos-grid--portfolio:has(.projeto-card:nth-child(1):nth-last-child(1)),
+  .projetos-grid--portfolio:has(.projeto-card:nth-child(2):nth-last-child(1)) {
+    grid-template-columns: 1fr;
+  }
+
+  .projetos-grid {
     padding: 0 1rem;
   }
 

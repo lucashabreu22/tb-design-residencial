@@ -7,6 +7,7 @@ import {
   Facebook,
   Linkedin,
 } from "lucide-react";
+import logoImg from "../../assets/img/PNG (MARCA DÁGUA)-06.png";
 import "./style.css";
 
 const Footer = () => {
@@ -16,9 +17,11 @@ const Footer = () => {
         <div className="footer-content">
           {/* Logo e Descrição */}
           <div className="footer-brand">
-            <h3 className="footer-logo font-le-quarte">
-              TB Design Residencial
-            </h3>
+            <img
+              src={logoImg}
+              alt="TB Design Residencial"
+              className="footer-logo-img font-le-quarte"
+            />
             <p className="footer-description">
               Transformando espaços e criando lares únicos com design inovador e
               funcionalidade inteligente.

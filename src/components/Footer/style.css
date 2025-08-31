@@ -29,6 +29,13 @@
   color: #eaeae5;
 }
 
+.footer-logo-img {
+  height: 60px;
+  width: auto;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
 .footer-description {
   font-size: 1.5rem;
   color: rgba(234, 234, 229, 0.8);
@@ -152,6 +159,10 @@
     margin-bottom: 1rem;
   }
 
+  .footer-logo-img {
+    height: 50px;
+  }
+
   .footer-description {
     font-size: 1rem;
     line-height: 1.5;
@@ -215,6 +226,10 @@
     margin-bottom: 0.75rem;
   }
 
+  .footer-logo-img {
+    height: 45px;
+  }
+
   .footer-description {
     font-size: 0.9rem;
     line-height: 1.4;
@@ -264,6 +279,10 @@
 
   .footer-logo {
     font-size: 1.25rem;
+  }
+
+  .footer-logo-img {
+    height: 40px;
   }
 
   .footer-description {
