@@ -11,11 +11,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-/* Modo estático - sem navegação quando há apenas uma imagem */
-.carousel-wrapper--static {
-  overflow: visible; /* Permite que a imagem seja totalmente visível */
-}
-
 .carousel-wrapper--static .carousel-images {
   transition: none; /* Remove transições no modo estático */
 }

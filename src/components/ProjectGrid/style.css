@@ -41,6 +41,16 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
+/* Estados específicos do projeto card */
+.projeto-card--clickable:active {
+  transform: translateY(-2px);
+}
+
+/* Card sem modal - remove cursor pointer mas mantém hover effect */
+.projeto-card:not(.projeto-card--clickable) {
+  cursor: default;
+}
+
 /* Container da Imagem */
 .projeto-image-container {
   position: relative;

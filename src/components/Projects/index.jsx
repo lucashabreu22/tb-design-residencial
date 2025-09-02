@@ -24,7 +24,7 @@ const Projects = () => {
         </Link>
       </div>
 
-      <ProjectGrid projects={projects} />
+      <ProjectGrid projects={projects} useModal={false} />
     </section>
   );
 };
