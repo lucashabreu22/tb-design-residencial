@@ -2,8 +2,8 @@ import "./style.css";
 import ServicesGrid from "../ServicesGrid";
 import { useServices } from "../../hooks/useServices";
 
-const Servicos = ({ showButton }) => {
-  const { servicos } = useServices();
+const Services = ({ showButton }) => {
+  const { services } = useServices();
 
   return (
     <section className="servicos-section" id="servicos">
@@ -12,9 +12,9 @@ const Servicos = ({ showButton }) => {
         <p>Solução completa para transformar seu ambiente.</p>
       </div>
 
-      <ServicesGrid servicos={servicos} showButton={showButton} />
+      <ServicesGrid services={services} showButton={showButton} />
     </section>
   );
 };
 
-export default Servicos;
+export default Services;

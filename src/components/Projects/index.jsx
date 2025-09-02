@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 import ProjectGrid from "../ProjectGrid";
 import { useProjects } from "../../hooks/useProjects";
 
-const Projetos = () => {
-  const { projetos } = useProjects();
+const Projects = () => {
+  const { projects } = useProjects();
 
   return (
     <section className="projetos-section">
@@ -24,9 +24,9 @@ const Projetos = () => {
         </Link>
       </div>
 
-      <ProjectGrid projetos={projetos} />
+      <ProjectGrid projects={projects} />
     </section>
   );
 };
 
-export default Projetos;
+export default Projects;

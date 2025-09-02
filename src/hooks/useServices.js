@@ -1,22 +1,22 @@
 import { servicesData } from "../data/services";
 
 export const useServices = () => {
-  const servicos = servicesData;
+  const services = servicesData;
 
   const getServiceByTitle = (title) => {
-    return servicos.find((servico) => servico.title === title);
+    return services.find((service) => service.title === title);
   };
 
   const getServiceById = (id) => {
-    return servicos.find((servico) => servico.id === id);
+    return services.find((service) => service.id === id);
   };
 
   const getFeaturedServices = (limit = 3) => {
-    return servicos.slice(0, limit);
+    return services.slice(0, limit);
   };
 
   return {
-    servicos,
+    services,
     getServiceByTitle,
     getServiceById,
     getFeaturedServices,

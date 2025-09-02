@@ -1,22 +1,22 @@
 import { projectsData } from "../data/projects";
 
 export const useProjects = () => {
-  const projetos = projectsData;
+  const projects = projectsData;
 
   const getProjectsByCategory = (category) => {
-    return projetos.filter((projeto) => projeto.categoria === category);
+    return projects.filter((project) => project.categoria === category);
   };
 
   const getFeaturedProjects = (limit = 3) => {
-    return projetos.slice(0, limit);
+    return projects.slice(0, limit);
   };
 
   const getProjectById = (id) => {
-    return projetos.find((projeto) => projeto.id === id);
+    return projects.find((project) => project.id === id);
   };
 
   return {
-    projetos,
+    projects,
     getProjectsByCategory,
     getFeaturedProjects,
     getProjectById,

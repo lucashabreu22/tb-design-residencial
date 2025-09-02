@@ -1,18 +1,17 @@
 import Banner from "../../components/Banner";
-import Servicos from "../../components/Servicos";
-import Projetos from "../../components/Projetos";
-import Contato from "../../components/Contato";
+import Services from "../../components/Services";
+import Projects from "../../components/Projects";
+import Contact from "../../components/Contact";
 import BackToTop from "../../components/common/BackToTop";
-
 import "./styles.css";
 
 const HomePage = () => {
   return (
     <>
       <Banner />
-      <Servicos showButton={true} />
-      <Projetos />
-      <Contato />
+      <Services showButton={true} />
+      <Projects />
+      <Contact />
       <BackToTop />
     </>
   );

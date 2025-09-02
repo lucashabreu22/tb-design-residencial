@@ -2,18 +2,18 @@ import "./style.css";
 import { CircleCheckBig, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const ServiceCard = ({ servico, showButton = false }) => {
-  const IconComponent = servico.icon;
+const ServiceCard = ({ service, showButton = false }) => {
+  const IconComponent = service.icon;
 
   return (
     <div className="service-card">
       <div className="service-header">
         <IconComponent className="service-main-icon" size={32} />
-        <h2>{servico.title}</h2>
+        <h2>{service.title}</h2>
       </div>
-      <p>{servico.description}</p>
+      <p>{service.description}</p>
       <ul className="service-items">
-        {servico.subServices.map((subService, subIndex) => (
+        {service.subServices.map((subService, subIndex) => (
           <li key={subIndex} className="service-item">
             <CircleCheckBig className="service-icon" size={16} />
             {subService}

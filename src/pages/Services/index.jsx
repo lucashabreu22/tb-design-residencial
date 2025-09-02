@@ -2,7 +2,7 @@ import SubPageHeader from "../../components/SubPageHeader";
 import ServicesGrid from "../../components/ServicesGrid";
 import ProcessStepsGrid from "../../components/ProcessStepsGrid";
 import ReasonsGrid from "../../components/ReasonsGrid";
-import Contato from "../../components/Contato";
+import Contact from "../../components/Contact";
 import BackToTop from "../../components/common/BackToTop";
 
 import { useServices } from "../../hooks/useServices";
@@ -13,8 +13,8 @@ import servicePageBg from "../../assets/img/servicePageBg2.png";
 
 import "./style.css";
 
-const ServicoPage = () => {
-  const { servicos } = useServices();
+const ServicesPage = () => {
+  const { services } = useServices();
   const { processSteps } = useProcessSteps();
   const { reasons } = useReasons();
 
@@ -29,7 +29,7 @@ const ServicoPage = () => {
       />
 
       <section className="servicos-page-content">
-        <ServicesGrid servicos={servicos} variant="page" />
+        <ServicesGrid services={services} variant="page" />
       </section>
 
       <section className="information-text-section">
@@ -52,10 +52,10 @@ const ServicoPage = () => {
         <ReasonsGrid reasons={reasons} />
       </section>
 
-      <Contato backgroundColor="white" />
+      <Contact backgroundColor="white" />
       <BackToTop />
     </>
   );
 };
 
-export default ServicoPage;
+export default ServicesPage;

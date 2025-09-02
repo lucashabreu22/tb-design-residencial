@@ -2,15 +2,15 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import "./style.css";
 
-const Contato = ({
+const Contact = ({
   backgroundColor = "#EAEAE5",
-  titulo = "Pronto para transformar seu espaço?",
+  title = "Pronto para transformar seu espaço?",
 }) => {
   return (
     <section className="contato-section" style={{ backgroundColor }}>
       <div className="contato-container">
         <div className="contato-content">
-          <h2 className="contato-titulo font-le-quarte">{titulo}</h2>
+          <h2 className="contato-titulo font-le-quarte">{title}</h2>
           <div className="contato-texto">
             <p>
               Vamos conversar sobre suas ideias e como podemos torná-las
@@ -27,4 +27,4 @@ const Contato = ({
   );
 };
 
-export default Contato;
+export default Contact;

@@ -1,8 +1,7 @@
 import SubPageHeader from "../../components/SubPageHeader";
-
 import aboutPageBg from "../../assets/img/about-bg.png";
 
-const SobrePage = () => {
+const AboutPage = () => {
   return (
     <>
       <SubPageHeader
@@ -16,4 +15,4 @@ const SobrePage = () => {
   );
 };
 
-export default SobrePage;
+export default AboutPage;

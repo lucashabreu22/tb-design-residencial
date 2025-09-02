@@ -3,16 +3,16 @@ import porfolioImageBg from "../../assets/img/portfolio-bg.jpg";
 
 import SubPageHeader from "../../components/SubPageHeader";
 import ProjectGrid from "../../components/ProjectGrid";
-import Contato from "../../components/Contato";
+import Contact from "../../components/Contact";
 import BackToTop from "../../components/common/BackToTop";
 
 import { useProjects } from "../../hooks/useProjects";
 import { useState } from "react";
 
-const Projetos = () => {
+const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [isLoading, setIsLoading] = useState(false);
-  const { projetos, getProjectsByCategory } = useProjects();
+  const { projects, getProjectsByCategory } = useProjects();
 
   // Constante com os filtros
   const filterButtons = [
@@ -21,7 +21,7 @@ const Projetos = () => {
     { id: "interiores", label: "Interiores", value: "Interiores" },
   ];
 
-  const hanadleCategoryClick = async (category) => {
+  const handleCategoryClick = async (category) => {
     setIsLoading(true);
     setActiveCategory(category);
 
@@ -37,9 +37,9 @@ const Projetos = () => {
     }
   };
 
-  const projetosFiltrados =
+  const filteredProjects =
     activeCategory === "Todos"
-      ? projetos
+      ? projects
       : getProjectsByCategory(activeCategory);
 
   return (
@@ -60,7 +60,7 @@ const Projetos = () => {
               className={`filter-button ${
                 activeCategory === filter.value ? "active" : ""
               }`}
-              onClick={() => hanadleCategoryClick(filter.value)}
+              onClick={() => handleCategoryClick(filter.value)}
             >
               {filter.label}
             </button>
@@ -68,12 +68,12 @@ const Projetos = () => {
         </div>
 
         {/* Grid de projetos ou estado vazio */}
-        {projetosFiltrados.length > 0 ? (
+        {filteredProjects.length > 0 ? (
           <div
             className={`gridProjects ${isLoading ? "projects-loading" : ""}`}
           >
             <ProjectGrid
-              projetos={projetosFiltrados || []}
+              projects={filteredProjects || []}
               variant="portfolio"
             />
           </div>
@@ -91,9 +91,9 @@ const Projetos = () => {
       {/* Componente BackToTop */}
       <BackToTop />
 
-      <Contato backgroundColor="white" titulo="Gostou do que viu?" />
+      <Contact backgroundColor="white" title="Gostou do que viu?" />
     </>
   );
 };
 
-export default Projetos;
+export default Projects;
