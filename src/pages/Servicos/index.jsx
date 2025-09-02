@@ -9,7 +9,7 @@ import { useServices } from "../../hooks/useServices";
 import { useProcessSteps } from "../../hooks/useProcessSteps";
 import { useReasons } from "../../hooks/useReasons";
 
-import servicePageBg from "../../assets/img/servicePageBg.png";
+import servicePageBg from "../../assets/img/servicePageBg2.png";
 
 import "./style.css";
 

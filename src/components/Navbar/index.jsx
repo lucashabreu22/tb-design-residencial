@@ -12,7 +12,7 @@ const Navbar = () => {
     { href: "/", label: "Home" },
     { href: "/servicos", label: "Serviços" },
     { href: "/portfolio", label: "Portfólio" },
-    { href: "/", label: "Sobre" },
+    { href: "/sobre", label: "Sobre" },
   ];
 
   // Função para fechar o menu

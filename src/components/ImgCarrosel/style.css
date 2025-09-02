@@ -1,0 +1,166 @@
+.carousel-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.carousel-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Modo estático - sem navegação quando há apenas uma imagem */
+.carousel-wrapper--static {
+  overflow: visible; /* Permite que a imagem seja totalmente visível */
+}
+
+.carousel-wrapper--static .carousel-images {
+  transition: none; /* Remove transições no modo estático */
+}
+
+.carousel-images {
+  display: flex; /* ✅ ESSENCIAL: Coloca imagens lado a lado */
+  transition: transform 0.3s ease;
+  width: 100%; /* ✅ Garante largura total */
+  pointer-events: none;
+}
+
+.carousel-image {
+  min-width: 100%; /* ✅ ESSENCIAL: Cada imagem ocupa toda a largura */
+  height: 400px;
+  flex-shrink: 0; /* ✅ Previne que encolham */
+  pointer-events: none;
+}
+
+/* Variante para projetos - altura menor */
+.carousel-container--project .carousel-image {
+  height: 250px;
+}
+
+.carousel-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel-container--project .carousel-image img {
+  object-fit: cover; /* Padrão para projetos - pode ser sobrescrito via prop */
+  background-color: #f5f5f5; /* Fundo neutro para áreas vazias */
+}
+
+/* Botões de navegação */
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.carousel-button:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-button--prev {
+  left: 12px;
+}
+
+.carousel-button--next {
+  right: 12px;
+}
+
+/* Indicadores (dots) - posicionados sobre a imagem */
+.carousel-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  z-index: 3;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-dot.active {
+  background: rgba(255, 255, 255, 0.9);
+  transform: scale(1.2);
+}
+
+.carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .carousel-image {
+    height: 300px;
+  }
+
+  .carousel-container--project .carousel-image {
+    height: 220px;
+  }
+
+  .carousel-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .carousel-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .carousel-button--prev {
+    left: 8px;
+  }
+
+  .carousel-button--next {
+    right: 8px;
+  }
+
+  .carousel-dots {
+    bottom: 12px;
+    gap: 5px;
+  }
+
+  .carousel-dot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-container--project .carousel-image {
+    height: 200px;
+  }
+}
