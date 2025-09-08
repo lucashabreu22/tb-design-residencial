@@ -13,8 +13,7 @@ const Contact = ({
           <h2 className="contato-titulo font-le-quarte">{title}</h2>
           <div className="contato-texto">
             <p>
-              Vamos conversar sobre suas ideias e como podemos torná-las
-              realidade.
+              Conversamos sobre suas ideias e como podemos torná-las realidade.
             </p>
             <p>Entre em contato e solicite um orçamento.</p>
           </div>

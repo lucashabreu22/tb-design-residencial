@@ -1,0 +1,247 @@
+.about-us-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us-text h2 {
+  font-size: 2.5rem;
+}
+
+.about-us-text p {
+  font-size: 2rem;
+  line-height: 1;
+  text-align: justify;
+  margin-left: 5rem;
+  margin-top: 1rem;
+}
+
+.about-us-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.about-us-img img {
+  width: 80%;
+  height: 50vh;
+  border-radius: 1rem;
+}
+
+.about-founder {
+  background-color: #f5f5f5;
+  padding: 4rem 2rem;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-founder-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem;
+}
+.about-founder-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-founder-img img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: translateY(5%);
+}
+.about-founder-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-founder-title {
+  font-size: 2.5rem;
+}
+.about-founder-text p {
+  font-size: 2rem;
+  line-height: 1;
+  text-align: justify;
+  margin-top: 1rem;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  /* About Us Section */
+  .about-us-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .about-us-text {
+    order: 1;
+    text-align: left;
+  }
+
+  .about-us-text h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-us-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-left: 0;
+    text-align: justify;
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .about-us-img {
+    order: 2;
+    margin: 2rem 0;
+  }
+
+  .about-us-img img {
+    width: 100%;
+    height: 250px;
+  }
+
+  /* About Founder Section */
+  .about-founder {
+    padding: 3rem 1.5rem;
+    margin-top: 2rem;
+  }
+
+  .about-founder-content {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+
+  .about-founder-img img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .about-founder-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .about-founder-text {
+    text-align: left;
+  }
+
+  .about-founder-text p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: justify;
+    padding: 1rem 1rem 0 1rem;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+  /* About Us Section */
+  .about-us-content {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .about-us-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-us-text p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+
+  .about-us-img {
+    margin: 0.1rem 0rem;
+  }
+
+  .about-us-img img {
+    height: 200px;
+  }
+
+  /* About Founder Section */
+  .about-founder {
+    padding: 2.5rem 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .about-founder-content {
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+  }
+
+  .about-founder-img img {
+    width: 160px;
+    height: 160px;
+  }
+
+  .about-founder-title {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-founder-text p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  /* About Us Section */
+  .about-us-content {
+    padding: 0 0.8rem;
+  }
+
+  .about-us-text h2 {
+    font-size: 1.6rem;
+  }
+
+  .about-us-text p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+
+  .about-us-img img {
+    height: 180px;
+  }
+
+  /* About Founder Section */
+  .about-founder {
+    padding: 2rem 0.8rem;
+  }
+
+  .about-founder-img img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-founder-title {
+    font-size: 1.6rem;
+  }
+
+  .about-founder-text p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+}
