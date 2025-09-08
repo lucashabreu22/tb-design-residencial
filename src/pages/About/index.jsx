@@ -73,7 +73,7 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <Contact backgroundColor="white" title="Vamos criar juntos?" />
+      <Contact title="Vamos criar juntos?" />
     </>
   );
 };
