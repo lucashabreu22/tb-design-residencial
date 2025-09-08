@@ -1,6 +1,7 @@
 import SubPageHeader from "../../components/SubPageHeader";
 import aboutPageBg from "../../assets/img/about-bg.png";
 import Contact from "../../components/Contact";
+import BackToTop from "../../components/common/BackToTop";
 
 import aboutUsImage from "../../assets/img/imageAboutUsSection.png";
 import fonderImage from "../../assets/img/founderImg.png";
@@ -72,6 +73,8 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+
+      <BackToTop />
 
       <Contact title="Vamos criar juntos?" />
     </>
