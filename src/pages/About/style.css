@@ -51,7 +51,7 @@
   align-items: center;
   justify-content: center;
   gap: 4rem;
-  padding: 4rem;
+  padding: 4rem 12rem 0;
 }
 .about-founder-img {
   display: flex;
