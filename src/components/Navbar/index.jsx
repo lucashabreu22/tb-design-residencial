@@ -40,7 +40,7 @@ const Navbar = () => {
           </li>
         ))}
         <li>
-          <Link to="/">
+          <Link to="/contato">
             <a className="orcamentoBttn">Orçamento</a>
           </Link>
         </li>
@@ -62,7 +62,7 @@ const Navbar = () => {
                 </li>
               ))}
               <li>
-                <Link to="/" onClick={closeMenu}>
+                <Link to="/contato" onClick={closeMenu}>
                   <a className="orcamentoBttn">Orçamento</a>
                 </Link>
               </li>

@@ -1,0 +1,256 @@
+.orcamento-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 2rem;
+  gap: 2rem;
+  min-height: 70vh;
+}
+
+.orcamento-form {
+  max-width: 500px;
+  margin: 0 0 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.orcamento-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.orcamento-social img {
+  pointer-events: none;
+}
+
+.orcamento-form label {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+}
+
+.orcamento-form input,
+.orcamento-form textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+}
+
+textarea[required] + label::after,
+label:has(+ input[required])::after,
+label:has(+ textarea[required])::after {
+  content: "*";
+  font-weight: bold;
+  margin-left: 4px;
+  position: relative;
+  top: -3px;
+  font-size: 1.1em;
+}
+
+.wpp-logo {
+  width: 24px;
+  height: 24px;
+  color: white;
+}
+
+.wpp-button {
+  background-color: #075e54;
+}
+
+.wpp-button:hover {
+  background-color: #064d43;
+}
+
+.submit-button {
+  background-color: #251c14;
+}
+
+.submit-button:hover {
+  background-color: #3e2e22;
+}
+
+/* Container para os botões lado a lado */
+.buttons-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+/* Estilos dos botões */
+.submit-button,
+.wpp-button {
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  color: white;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 100%;
+}
+
+.wpp-link {
+  display: block;
+  width: 100%;
+}
+
+.input-error {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2) !important;
+}
+
+.input-error:focus {
+  border-color: #e74c3c !important;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.3) !important;
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 768px) {
+  .orcamento-container {
+    grid-template-columns: 1fr;
+    padding: 3rem 1.5rem;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .orcamento-social {
+    text-align: center;
+    order: 1;
+  }
+
+  .orcamento-social img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+  }
+
+  .orcamento-form {
+    order: 2;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  .orcamento-form form {
+    gap: 0.8rem;
+  }
+
+  .orcamento-form label {
+    font-size: 1.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .orcamento-form input,
+  .orcamento-form textarea {
+    padding: 0.9rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .buttons-container {
+    gap: 0.8rem;
+    margin-top: 1.2rem;
+  }
+
+  .submit-button,
+  .wpp-button {
+    padding: 0.9rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 480px) {
+  .orcamento-container {
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .orcamento-social img {
+    max-width: 280px;
+  }
+
+  .orcamento-form {
+    padding: 0;
+    gap: 0.8rem;
+  }
+
+  .orcamento-form form {
+    gap: 0.6rem;
+  }
+
+  .orcamento-form label {
+    font-size: 1.2rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .orcamento-form input,
+  .orcamento-form textarea {
+    padding: 0.8rem;
+    font-size: 1rem;
+    width: 300px;
+  }
+
+  .buttons-container {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    margin-top: 1rem;
+  }
+
+  .submit-button,
+  .wpp-button {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+
+  .wpp-logo {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Medium Tablets */
+@media (max-width: 900px) and (min-width: 769px) {
+  .orcamento-container {
+    padding: 3rem 1.5rem;
+  }
+
+  .orcamento-form {
+    margin: 0 0 0 2rem;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .orcamento-container {
+    padding: 1.5rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .orcamento-social img {
+    max-width: 240px;
+  }
+
+  .orcamento-form label {
+    font-size: 1.1rem;
+  }
+
+  .orcamento-form input,
+  .orcamento-form textarea {
+    padding: 0.7rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button,
+  .wpp-button {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+}

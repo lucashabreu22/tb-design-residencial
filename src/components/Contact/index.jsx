@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight } from "lucide-react";
 import "./style.css";
+import { Link } from "react-router-dom";
 
 const Contact = ({
   backgroundColor = "#EAEAE5",
@@ -17,9 +18,11 @@ const Contact = ({
             </p>
             <p>Entre em contato e solicite um orçamento.</p>
           </div>
-          <button className="contato-button">
-            Solicitar Orçamento Gratuito <ArrowRight size={20} />
-          </button>
+          <Link to="/contato">
+            <button className="contato-button">
+              Solicitar Orçamento Gratuito <ArrowRight size={20} />
+            </button>
+          </Link>
         </div>
       </div>
     </section>
