@@ -21,49 +21,60 @@ const Navbar = () => {
   };
 
   return (
-    <nav>
-      <Link to="/" className="logo-link">
+    <nav role="navigation" aria-label="Menu principal">
+      <Link to="/" className="logo-link" aria-label="Ir para a página inicial">
         <div className="logo-container">
-          <img className="logo" src={logoImg} alt="tbLogo" />
+          <img
+            className="logo"
+            src={logoImg}
+            alt="TB Design Residencial - Logo"
+          />
         </div>
         <h1 className="font-gantic titleName">Design Residencial</h1>
       </Link>
 
       {/* Desktop Navigation*/}
-      <div className="desktopNav"></div>
-      <ul className="nav-links-desktop">
+      <ul className="nav-links-desktop" role="menubar">
         {navItems.map((navItem, index) => (
-          <li key={index}>
-            <Link to={navItem.href}>{navItem.label}</Link>
+          <li key={index} role="none">
+            <Link to={navItem.href} role="menuitem">
+              {navItem.label}
+            </Link>
           </li>
         ))}
-        <li>
-          <Link to="/contato" className="orcamentoBttn">
+        <li role="none">
+          <Link to="/contato" className="orcamentoBttn" role="menuitem">
             Orçamento
           </Link>
         </li>
       </ul>
       {/* Mobile Navigation*/}
       <div className="mobileNav">
-        <button onClick={() => setIsOpen((prev) => !prev)}>
-          <Menu className="menuIcon" />
+        <button
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-expanded={isOpen}
+          aria-controls="nav-links-mobile"
+          aria-label="Abrir menu de navegação"
+        >
+          <Menu className="menuIcon" aria-hidden="true" />
         </button>
 
         <div className="mobileMenu">
           {isOpen && (
-            <ul className="nav-links-mobile" id="nav-links-mobile">
+            <ul className="nav-links-mobile" id="nav-links-mobile" role="menu">
               {navItems.map((navItem, index) => (
-                <li key={index}>
-                  <Link to={navItem.href} onClick={closeMenu}>
+                <li key={index} role="none">
+                  <Link to={navItem.href} onClick={closeMenu} role="menuitem">
                     {navItem.label}
                   </Link>
                 </li>
               ))}
-              <li>
+              <li role="none">
                 <Link
                   to="/contato"
                   onClick={closeMenu}
                   className="orcamentoBttn"
+                  role="menuitem"
                 >
                   Orçamento
                 </Link>

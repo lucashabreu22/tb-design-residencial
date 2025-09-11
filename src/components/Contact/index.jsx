@@ -19,7 +19,10 @@ const Contact = ({
             <p>Entre em contato e solicite um orçamento.</p>
           </div>
           <Link to="/contato">
-            <button className="contato-button">
+            <button
+              className="contato-button"
+              aria-label="Solicitar orçamento gratuito"
+            >
               Solicitar Orçamento Gratuito <ArrowRight size={20} />
             </button>
           </Link>

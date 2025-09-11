@@ -138,11 +138,20 @@ ${
           </form>
 
           <div className="buttons-container">
-            <button type="submit" form="contact-form" className="submit-button">
+            <button
+              type="submit"
+              form="contact-form"
+              className="submit-button"
+              aria-label="Enviar formulário de contato"
+            >
               Enviar
             </button>
 
-            <button className="wpp-button" onClick={handleWppClick}>
+            <button
+              className="wpp-button"
+              onClick={handleWppClick}
+              aria-label="Enviar mensagem via WhatsApp"
+            >
               <img src={wppIcon} alt="wpp-logo" className="wpp-logo" />
             </button>
           </div>

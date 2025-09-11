@@ -61,6 +61,7 @@ const Projects = () => {
                 activeCategory === filter.value ? "active" : ""
               }`}
               onClick={() => handleCategoryClick(filter.value)}
+              aria-label={`Filtrar projetos por ${filter.label}`}
             >
               {filter.label}
             </button>

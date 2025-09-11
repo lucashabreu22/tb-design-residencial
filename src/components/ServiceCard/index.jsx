@@ -21,7 +21,10 @@ const ServiceCard = ({ service, showButton = false }) => {
         ))}
         {showButton && (
           <Link to="/servicos">
-            <button className="saiba-mais-bttn">
+            <button
+              className="saiba-mais-bttn"
+              aria-label="Saiba mais sobre nossos serviços"
+            >
               Saiba Mais <ArrowRight size={20} />
             </button>
           </Link>

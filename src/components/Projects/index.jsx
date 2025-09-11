@@ -18,7 +18,10 @@ const Projects = () => {
           </p>
         </div>
         <Link to="/portfolio" className="todos-projetos-link">
-          <button className="todos-projetos-button">
+          <button
+            className="todos-projetos-button"
+            aria-label="Ver todos os projetos"
+          >
             Todos os Projetos <ArrowRight size={20} />
           </button>
         </Link>

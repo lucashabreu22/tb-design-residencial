@@ -81,6 +81,7 @@ const ImgCarrosel = ({
         <button
           className="carousel-button carousel-button--prev"
           onClick={goToPrevious}
+          aria-label="Imagem anterior"
         >
           <ChevronLeft size={18} />
         </button>
@@ -103,6 +104,7 @@ const ImgCarrosel = ({
         <button
           className="carousel-button carousel-button--next"
           onClick={goToNext}
+          aria-label="Próxima imagem"
         >
           <ChevronRight size={18} />
         </button>
@@ -114,6 +116,7 @@ const ImgCarrosel = ({
             key={index}
             className={`carousel-dot ${index === currentIndex ? "active" : ""}`}
             onClick={() => goToSlide(index)}
+            aria-label={`Ir para slide ${index + 1}`}
           />
         ))}
       </div>

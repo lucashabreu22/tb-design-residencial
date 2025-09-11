@@ -18,6 +18,24 @@
   box-sizing: border-box;
 }
 
+/* Focus visible para melhor acessibilidade */
+:focus-visible {
+  outline: 2px solid #251c14;
+  outline-offset: 2px;
+}
+
+/* Reduzir movimento para usuários com preferência por movimento reduzido */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 body {
   font-family: "Gantic Regular", sans-serif;
   color: #251c14;
@@ -50,6 +68,17 @@ button {
   cursor: pointer;
   border: none;
   background: none;
+}
+
+/* Melhor contraste para botões quando focados */
+button:focus-visible {
+  outline: 2px solid #251c14;
+  outline-offset: 2px;
+}
+
+/* Garante que texto seja selecionável para leitores de tela */
+button {
+  user-select: none;
 }
 
 ul,
