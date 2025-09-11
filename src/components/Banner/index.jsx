@@ -1,14 +1,25 @@
 import "./style.css";
 import bannerImage from "/src/assets/img/hero-project.jpg";
 import watermarkImage from "/src/assets/img/PNG (MARCA DÁGUA)-01.png";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 import { Link } from "react-router-dom";
 
 import { ArrowRight } from "lucide-react";
 
 const Banner = () => {
+  const [bannerRef, isBannerVisible] = useIntersectionObserver({
+    threshold: 0.1,
+    rootMargin: "0px 0px 0px 0px", // Remove margin para trigger mais rápido
+  });
+
   return (
-    <section className="banner-section">
+    <section
+      className={`banner-section fade-in-up ${
+        isBannerVisible ? "animate" : ""
+      }`}
+      ref={bannerRef}
+    >
       <div className="img-container">
         <img src={bannerImage} alt="mainBannerImg" />
         <div className="imgBg"></div>

@@ -2,6 +2,7 @@ import SubPageHeader from "../../components/SubPageHeader";
 import aboutPageBg from "../../assets/img/about-bg.png";
 import Contact from "../../components/Contact";
 import BackToTop from "../../components/common/BackToTop";
+import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 import aboutUsImage from "../../assets/img/imageAboutUsSection.png";
 import fonderImage from "../../assets/img/founderImg.png";
@@ -9,6 +10,9 @@ import fonderImage from "../../assets/img/founderImg.png";
 import "./style.css";
 
 const AboutPage = () => {
+  const [aboutUsRef, isAboutUsVisible] = useIntersectionObserver();
+  const [founderRef, isFounderVisible] = useIntersectionObserver();
+
   return (
     <>
       <SubPageHeader
@@ -19,7 +23,10 @@ const AboutPage = () => {
         backgroundImage={aboutPageBg}
       />
 
-      <section className="about-us">
+      <section
+        className={`about-us fade-in-up ${isAboutUsVisible ? "animate" : ""}`}
+        ref={aboutUsRef}
+      >
         <div className="about-us-content">
           <div className="about-us-text">
             <h2 className="about-us-title font-le-quarte">Nossa História</h2>
@@ -44,7 +51,12 @@ const AboutPage = () => {
         </div>
       </section>
 
-      <section className="about-founder">
+      <section
+        className={`about-founder fade-in-up ${
+          isFounderVisible ? "animate" : ""
+        }`}
+        ref={founderRef}
+      >
         <h2 className="about-founder-title font-le-quarte">
           Conheça o responsável
         </h2>
