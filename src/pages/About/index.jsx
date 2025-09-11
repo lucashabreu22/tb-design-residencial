@@ -39,13 +39,7 @@ const AboutPage = () => {
             </p>
           </div>
           <div className="about-us-img">
-            <img 
-              src={aboutUsImage} 
-              alt="TB Design - Sobre nossa empresa de arquitetura"
-              loading="lazy"
-              width="600"
-              height="400"
-            />
+            <img src={aboutUsImage} alt="aboutUsImag" />
           </div>
         </div>
       </section>
@@ -56,13 +50,7 @@ const AboutPage = () => {
         </h2>
         <div className="about-founder-content">
           <div className="about-founder-img">
-            <img 
-              src={fonderImage} 
-              alt="Thalyson Borges - Fundador TB Design Residencial"
-              loading="lazy"
-              width="300"
-              height="300"
-            />
+            <img src={fonderImage} alt="Thalyson Borges" />
           </div>
           <div className="about-founder-text">
             <p className="about-founder-text">
