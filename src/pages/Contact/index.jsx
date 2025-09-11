@@ -96,7 +96,7 @@ ${
         </div>
         <div className="orcamento-form">
           <form id="contact-form" onSubmit={handleSubmit}>
-            <label htmlFor="name">Nome Completo</label>
+            <label htmlFor="name">Nome</label>
             <input
               type="text"
               id="name"

@@ -34,14 +34,12 @@ const Navbar = () => {
       <ul className="nav-links-desktop">
         {navItems.map((navItem, index) => (
           <li key={index}>
-            <Link to={navItem.href}>
-              <a>{navItem.label}</a>
-            </Link>
+            <Link to={navItem.href}>{navItem.label}</Link>
           </li>
         ))}
         <li>
-          <Link to="/contato">
-            <a className="orcamentoBttn">Orçamento</a>
+          <Link to="/contato" className="orcamentoBttn">
+            Orçamento
           </Link>
         </li>
       </ul>
@@ -57,13 +55,17 @@ const Navbar = () => {
               {navItems.map((navItem, index) => (
                 <li key={index}>
                   <Link to={navItem.href} onClick={closeMenu}>
-                    <a>{navItem.label}</a>
+                    {navItem.label}
                   </Link>
                 </li>
               ))}
               <li>
-                <Link to="/contato" onClick={closeMenu}>
-                  <a className="orcamentoBttn">Orçamento</a>
+                <Link
+                  to="/contato"
+                  onClick={closeMenu}
+                  className="orcamentoBttn"
+                >
+                  Orçamento
                 </Link>
               </li>
             </ul>
