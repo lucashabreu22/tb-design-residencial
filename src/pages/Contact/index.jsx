@@ -133,6 +133,7 @@ ${
               rows="4"
               value={formData.message}
               onChange={handleInputChange}
+              placeholder="Conte-nos sobre o seu projeto..."
               required
             ></textarea>
           </form>
