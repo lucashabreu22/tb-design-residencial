@@ -142,17 +142,20 @@ ${
               type="submit"
               form="contact-form"
               className="submit-button"
-              aria-label="Enviar formulário de contato"
+              aria-label="Enviar pedido de orçamento"
             >
-              Enviar
+              Enviar Pedido de Orçamento
             </button>
+
+            <div className="divider">OU</div>
 
             <button
               className="wpp-button"
               onClick={handleWppClick}
-              aria-label="Enviar mensagem via WhatsApp"
+              aria-label="Iniciar conversa no WhatsApp"
             >
               <img src={wppIcon} alt="wpp-logo" className="wpp-logo" />
+              Vamos conversar no WhatsApp
             </button>
           </div>
         </div>
