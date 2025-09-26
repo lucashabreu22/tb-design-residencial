@@ -1,7 +1,6 @@
 import "./style.css";
 
 import Modal from "../Modal";
-import ImgCarrosel from "../ImgCarrosel";
 import { useState } from "react";
 import Swiper from "../Swiper";
 
