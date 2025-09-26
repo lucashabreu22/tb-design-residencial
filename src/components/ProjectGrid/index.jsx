@@ -3,6 +3,7 @@ import "./style.css";
 import Modal from "../Modal";
 import ImgCarrosel from "../ImgCarrosel";
 import { useState } from "react";
+import Swiper from "../Swiper";
 
 const ProjectGrid = ({
   projects,
@@ -63,17 +64,8 @@ const ProjectGrid = ({
         >
           {selectedProject && (
             <>
-              <ImgCarrosel
-                images={
-                  selectedProject.imagens || [
-                    {
-                      src: selectedProject.imagem,
-                      alt: selectedProject.titulo,
-                    },
-                  ]
-                }
-                autoPlay={true}
-              />
+              <Swiper projects={selectedProject} />
+
               <div style={{ marginTop: "1rem" }}>
                 {selectedProject.descricaoModal && (
                   <div

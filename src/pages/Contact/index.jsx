@@ -10,6 +10,7 @@ import BackToTop from "../../components/common/BackToTop";
 import contactImgBg from "../../assets/img/contactImgBg.png";
 import pngContactImg from "../../assets/img/PNG (MARCA DÁGUA)-15 (Contact).png";
 import wppIcon from "../../assets/img/whatsapp-logo.svg";
+import igIcon from "../../assets/img/instagram-logo.svg";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -107,16 +108,16 @@ ${
               className={errors.name ? "input-error" : ""}
             />
 
-            <label htmlFor="email">Email</label>
+            {/* <label htmlFor="email">Email</label>
             <input
               type="email"
               id="email"
               name="email"
               value={formData.email}
               onChange={handleInputChange}
-            />
+            /> */}
 
-            <label htmlFor="phone">Telefone</label>
+            {/* <label htmlFor="phone">Telefone</label>
             <input
               type="tel"
               id="phone"
@@ -124,7 +125,7 @@ ${
               value={formData.phone}
               onChange={handleInputChange}
               required
-            />
+            /> */}
 
             <label htmlFor="message">Mensagem</label>
             <textarea
@@ -139,16 +140,14 @@ ${
           </form>
 
           <div className="buttons-container">
-            <button
+            {/* <button
               type="submit"
               form="contact-form"
               className="submit-button"
               aria-label="Enviar pedido de orçamento"
             >
               Enviar Pedido de Orçamento
-            </button>
-
-            <div className="divider">OU</div>
+            </button> */}
 
             <button
               className="wpp-button"
@@ -156,7 +155,25 @@ ${
               aria-label="Iniciar conversa no WhatsApp"
             >
               <img src={wppIcon} alt="wpp-logo" className="wpp-logo" />
-              Vamos conversar no WhatsApp
+              WhatsApp
+            </button>
+
+            <div className="divider">OU</div>
+
+            <button
+              className="wpp-button"
+              aria-label="Instagram"
+              id="ig-button"
+            >
+              <img src={igIcon} alt="ig-logo" className="wpp-logo" />
+              <a
+                href="https://www.instagram.com/tbdesignresidencial"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Instagram
+              </a>
             </button>
           </div>
         </div>

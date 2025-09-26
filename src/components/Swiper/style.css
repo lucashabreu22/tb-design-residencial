@@ -1,0 +1,18 @@
+/* === PAGINATION CUSTOMIZATION === */
+.swiper-pagination {
+  bottom: 20px; /* Posição */
+}
+
+/* Bullets normais */
+.swiper-pagination-bullet {
+  width: 10px; /* Largura */
+  height: 10px; /* Altura */
+  background: rgba(255, 255, 255, 0.5); /* Cor inativa */
+  opacity: 1;
+  margin: 0 8px; /* Espaçamento entre bullets */
+}
+
+/* Bullet ativo */
+.swiper-pagination-bullet-active {
+  background: #ffffff; /* Cor ativa (branco) */
+}

@@ -70,6 +70,10 @@ label:has(+ textarea[required])::after {
   background-color: #1da851;
 }
 
+#ig-button {
+  background-color: #251c14;
+}
+
 .submit-button {
   background-color: #251c14;
 }
@@ -91,7 +95,7 @@ label:has(+ textarea[required])::after {
 /* Divisor "OU" */
 .divider {
   font-size: 1.3rem;
-  color: #666;
+  color: #251c14;
   text-align: center;
   margin: 0.5rem 0;
   font-weight: 500;
@@ -105,7 +109,7 @@ label:has(+ textarea[required])::after {
   top: 50%;
   width: 90px;
   height: 1px;
-  background-color: #ccc;
+  background-color: #251c14;
 }
 
 .divider::before {
