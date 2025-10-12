@@ -6,7 +6,7 @@ import useIntersectionObserver from "../../hooks/useIntersectionObserver";
 
 import aboutUsImage from "../../assets/img/imageAboutUsSection.png";
 import fonderImage from "../../assets/img/founderImg.png";
-
+import videoApresentacao from "../../assets/img/videoApresentacao.mp4";
 import "./style.css";
 
 const AboutPage = () => {
@@ -86,9 +86,25 @@ const AboutPage = () => {
         </div>
       </section>
 
+      <section>
+        <h2 className="video-title font-le-quarte">
+          Como a TB Design foi idealizada
+        </h2>
+        <div className="video-presentation-container">
+          <video
+            className="video-presentation"
+            src={videoApresentacao}
+            controls
+            preload="metadata"
+          >
+            Seu navegador não suporta o elemento de vídeo.
+          </video>
+        </div>
+      </section>
+
       <BackToTop />
 
-      <Contact title="Vamos criar juntos?" />
+      <Contact title="Vamos criar juntos?" backgroundColor="white" />
     </>
   );
 };

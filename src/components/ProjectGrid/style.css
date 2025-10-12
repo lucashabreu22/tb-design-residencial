@@ -142,10 +142,11 @@
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 480px) {
   .projetos-grid,
   .projetos-grid--portfolio {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
   }
 
   /* No mobile, todos os cards ocupam 100% da largura */
@@ -167,7 +168,7 @@
   }
 
   .projeto-descricao {
-    font-size: 1.2em;
+    font-size: 1rem; /* Reduzido de 1.2em para 1rem */
   }
 
   .projeto-content {

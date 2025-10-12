@@ -1,4 +1,4 @@
-import { House, Ruler, Box } from "lucide-react";
+import { House, Ruler, Box, Ticket } from "lucide-react";
 
 export const servicesData = [
   {
@@ -35,6 +35,19 @@ export const servicesData = [
       "Tours Virtuais",
       "Plantas 3D",
       "Animações",
+    ],
+  },
+  {
+    id: 4,
+    title: "Cenografia e Eventos",
+    description:
+      "Criação e coordenação do projeto de cenografia do seu evento.",
+    icon: Ticket,
+    subServices: [
+      "Projeto Cenpográfico",
+      "Perpectivas 3D",
+      "Renders",
+      "Moodboards",
     ],
   },
 ];

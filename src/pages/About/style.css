@@ -125,6 +125,28 @@
   margin-top: 1rem;
 }
 
+.video-presentation-container {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0;
+  padding: 0 2rem;
+}
+
+video.video-presentation {
+  width: 30%;
+  max-width: 1200px;
+  height: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  border-radius: 2rem;
+}
+
+.video-title {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 4rem;
+}
+
 /* Responsive Design - Tablet */
 @media (max-width: 768px) {
   /* About Us Section */
@@ -196,6 +218,21 @@
     text-align: justify;
     padding: 1rem 1rem 0 1rem;
   }
+
+  /* Video Section */
+  .video-presentation-container {
+    margin: 3rem 0;
+    padding: 0 1.5rem;
+  }
+
+  video.video-presentation {
+    border-radius: 1.5rem;
+  }
+
+  .video-title {
+    font-size: 2rem;
+    margin-top: 3rem;
+  }
 }
 
 /* Responsive Design - Mobile */
@@ -250,6 +287,22 @@
     font-size: 1.3rem;
     line-height: 1.5;
   }
+
+  /* Video Section */
+  .video-presentation-container {
+    margin: 2.5rem 0;
+    padding: 0 1rem;
+  }
+
+  video.video-presentation {
+    border-radius: 1rem;
+    width: 70%;
+  }
+
+  .video-title {
+    font-size: 1.8rem;
+    margin-top: 2.5rem;
+  }
 }
 
 /* Extra Small Mobile */
@@ -289,5 +342,21 @@
   .about-founder-text p {
     font-size: 0.95rem;
     line-height: 1.4;
+  }
+
+  /* Video Section */
+  .video-presentation-container {
+    margin: 2rem 0;
+    padding: 0 0.8rem;
+  }
+
+  video.video-presentation {
+    border-radius: 0.8rem;
+  }
+
+  .video-title {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
   }
 }

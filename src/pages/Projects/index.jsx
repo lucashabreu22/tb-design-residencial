@@ -19,6 +19,7 @@ const Projects = () => {
     { id: "todos", label: "Todos", value: "Todos" },
     { id: "residencial", label: "Residencial", value: "Residencial" },
     { id: "interiores", label: "Interiores", value: "Interiores" },
+    { id: "cenografia", label: "Cenografia", value: "Cenografia" },
   ];
 
   const handleCategoryClick = async (category) => {
