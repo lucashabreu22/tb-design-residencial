@@ -85,21 +85,21 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* <section>
+      <section>
         <h2 className="video-title font-le-quarte">
           Como a TB Design foi idealizada
         </h2>
         <div className="video-presentation-container">
-          <video
+          <iframe
             className="video-presentation"
-            src={videoApresentacao}
-            controls
-            preload="metadata"
-          >
-            Seu navegador não suporta o elemento de vídeo.
-          </video>
+            title="Como a TB Design foi idealizada"
+            src="https://www.youtube.com/embed/dWK4bt6p0Hc?rel=0&showinfo=0&modestbranding=1"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+          ></iframe>
         </div>
-      </section> */}
+      </section>
 
       <BackToTop />
 
